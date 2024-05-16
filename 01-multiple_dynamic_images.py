@@ -13,7 +13,6 @@ def main():
     out_path = Path(r'Dataset/Multiple_dynamic_images_stride_10_frames_15')
     out_path.mkdir()
     data_path = Path(data_path)
-    #print(f'Load data[{data_path.resolve()}]...')
     categories = list(data_path.glob('*/'))
     za=0
     for subfolder in categories:
