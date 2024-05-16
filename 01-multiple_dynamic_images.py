@@ -33,10 +33,7 @@ def main():
             assert len(chunk) == WINDOW_LENGTH
 
             dynamic_image = get_dynamic_image(chunk)
-            #new_filename = '{}-{:03d}.png'.format(os.path.join(out_category_subfolder, get_filename_only(filename)), dynamic_image)
-            #cv2.imwrite(new_filename, dynamic_image)
-            #cv2.imwrite(str(out_category_subfolder / (out_category_subfolder % str(i).zfill(2) + '.jpg')), dynamic_image)
-            #filename = filename+str(i)
+      
             cv2.imwrite(str(out_category_subfolder / (word+str(i).zfill(3)+'.jpg')), dynamic_image)
 
 if __name__ == '__main__':
