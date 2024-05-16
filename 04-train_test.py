@@ -131,9 +131,6 @@ predictions = model.predict(validation_generator, verbose=1)
 y_predictions = np.argmax(predictions, axis=1)
 true_classes = validation_generator.classes
     
-    # evaluate validation performance
-    #print("***Performance on Validation data***")
-    #val_acc, val_prec, val_f1Score = my_metrics(true_classes, y_predictions)
     # Save the training history to a CSV file
 print(history.history)
 history_df = pd.DataFrame(history.history)
@@ -173,14 +170,6 @@ best_model = load_model(os.path.join(checkpoint_filepath, '380x380_best_model.h5
 test_generator.reset()
 predictions = best_model.predict(test_generator, verbose=1)
     
-    # Your data splitting logic
-    
-    # ... (previous code for data preparation)
-
-    # Training and evaluation
-
-    # ... (previous code for model training and evaluation)
-
     # Save predictions for this fold to a CSV file
 test_results = pd.DataFrame({
     "Filename": test_generator.filenames,
