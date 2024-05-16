@@ -15,10 +15,6 @@ def main():
     data_path = Path(data_path)
     #print(f'Load data[{data_path.resolve()}]...')
     categories = list(data_path.glob('*/'))
-    #print(categories)
-    #word = str(categories[0])
-    #word1=word[-10:]
-    #print(word.split('*/'))
     za=0
     for subfolder in categories:
         word = str(categories[za])
